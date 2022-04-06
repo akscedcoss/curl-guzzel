@@ -1,0 +1,13 @@
+
+<h1>Search Results</h1>
+
+
+
+<?php foreach($res as $key=>$value){ ?>
+<!-- SEARCH RESULTS -->
+
+		<h4><a href="<?php echo "/index/detailGuzzle/".$value->name ?>"><?php echo $value->name.' '.$value->region .'-'.$value->country?></a></h4>
+		
+<!-- /SEARCH RESULTS -->
+
+<?php } ?>

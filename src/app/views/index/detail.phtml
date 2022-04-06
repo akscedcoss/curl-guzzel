@@ -1,0 +1,23 @@
+<h1>Welcome To <?php echo $city; ?>  Page </h1>
+<form method="post" action="" >
+
+  <input type="submit" name="contr" value="Current weather"> 
+     <input type="submit" name="contr" value="Forecast">    
+    <input type="submit" name="contr" value=" History">    
+   <input type="submit" name="contr" value="Time Zone">      
+    <input type="submit" name="contr" value=" Sports">    
+     <input type="submit" name="contr" value="Astronomy">    
+    <input type="submit" name="contr" value="Weather Alerts">     
+     <input type="submit" name="contr" value="Air Quality">    
+</form>
+
+<!-- Current Weather -->
+<?php 
+if(isset($currentWeather)){
+echo "<img src=https://".substr($currentWeather->current->condition->icon,2).">";
+echo "<h2>".$currentWeather->location->name."</h2><br>"; 
+echo "<h3>".$currentWeather->location->region."  ".$currentWeather->location->country."</h3>"; 
+echo "<h3><b>Current:</b> Celsius:".$currentWeather->current->temp_c." Fahrenheit :".$currentWeather->current->temp_f."</h3>";
+
+
+}?>
